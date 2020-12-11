@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
-<body class="bg-dark">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
         <a class="navbar-brand" href="#">Al-Qur'an Lite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,9 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
+    <div class="container mt-2">
+        <img src="img/cover_quran.png" alt="Gambar Cover Al-Qur'an" class="img-thumbnail">
+        <h1 class="text-center my-4">Daftar Surat</h1>
         
         <div id="data">
             
@@ -42,7 +44,7 @@
         .then(data=>{
             for(i=0;i<data.length;i++){
                 tulisan += 
-                `<div class="card mb-4">
+                `<div class="card mb-4 shadow-lg">
                     <div class="card-header">
                         Surat Ke ${data[i]['nomor']} - Berjumlah ${data[i]['ayat']} ayat.
                     </div>
